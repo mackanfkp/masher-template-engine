@@ -7,8 +7,7 @@ Masher Template Engine
 * Version: 1.0
 * Author: mackanfkp <mackanfkp@gmail.com>
 * Author URI: https://github.com/mackanfkp/
-* License: GPLv2 or later
-
+* License: GPLv2
 
 Basic usage:
 --------------------------------
@@ -27,6 +26,9 @@ Basic usage:
 	// Set some variables
 	$o->set('key1', 'val1');
 	$o->set('key2', 'val2');
+
+	// ...and/or set an array or variables
+	$o->setArray(array('key3' => 'val3', 'key4' => 'val4', 'key1' => 'new_val'), $merge = true);
 
 	// Output the template named example.phtml
 	$o->show('example');
