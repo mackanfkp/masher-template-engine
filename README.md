@@ -11,7 +11,7 @@ Masher Template Engine
 
 Why use this plugin?
 --------------------------------
-This plugin was made to separate logic from markup when building plugins and widgets for Wordpress. Without a template engine like this you have to write your markup in your classes and methods, which makes the code, not only ugly, but also vry hard to read.
+This plugin was made to separate logic from markup when building plugins and widgets for Wordpress. Without a template engine like this you have to write your markup in your classes and methods which makes the code, not only ugly, but also very hard to read.
 
 
 Basic usage:
