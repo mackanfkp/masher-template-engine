@@ -1,9 +1,13 @@
 Masher Template Engine
 ================================
 
-* Description: A simple template engine for plugins and/or methods in Wordpress.
-* Author: mackanfkp
-* Licence: 
+* Plugin Name: Masher Template Engine
+* Plugin URI: https://github.com/mackanfkp/masher-template-engine
+* Description: A simple template engine for wordpress developers. Use it to separate logic from markup in your plugins, widgets, classes and methods.
+* Version: 1.0
+* Author: mackanfkp <mackanfkp@gmail.com>
+* Author URI: https://github.com/mackanfkp/
+* License: GPLv2 or later
 
 
 Basic usage:

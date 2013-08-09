@@ -1,27 +1,46 @@
 <?php
-/**
- * @package Masher Template Engine
- */
+/*
+Plugin Name: Masher Template Engine
+Plugin URI: https://github.com/mackanfkp/masher-template-engine
+Description: A simple template engine for wordpress developers. Use it to separate logic from markup in your plugins, widgets, classes and methods.
+Version: 1.0
+Author: mackanfkp <mackanfkp@gmail.com>
+Author URI: https://github.com/mackanfkp/
+License: GPLv2
+*/
 
 /**
- * Plugin Name: Masher Template Engine
- * Plugin URI: https://github.com/mackanfkp/wordpress/plugins/masher-template-engine/
- * Description: A simple template class to separate logic from markup in wordpress plugins and methods.
- * Version: 0.0.1
- * Author: mackanfkp
- * Author URI: https://github.com/mackanfkp/wordpress/
- * License:
+ * Masher Template Engine - Wordpress Template Plugin
+ * Copyright (C) 2013 mackanfkp ( mackanfkp@gmail.com )
+
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-// Deny direct access to plugin!
-if (! function_exists('add_action')) {
-	header('HTTP/1.0 404 Not Found');
+// Deny access if no ABSPATH is set, i.e. direct access to plugin from browser
+if (! defined('ABSPATH')) {
+    header('HTTP/1.0 404 Not Found');
 	exit;
 }
 
+// Skip this plugin if wp is currently installing
+if (defined('WP_INSTALLING') && WP_INSTALLING)
+    return;
+
 // Some defines
 define('MASHER_TEMPLATE_ENGINE_NAME',    'Masher Template Engine');
-define('MASHER_TEMPLATE_ENGINE_VERSION', '0.0.1');
+define('MASHER_TEMPLATE_ENGINE_VERSION', '1.0');
 define('MASHER_TEMPLATE_ENGINE_AUTHOR',  'mackanfkp');
 
 /**
