@@ -40,3 +40,7 @@ Basic usage:
 
 	// ...or save output to a variable
 	$html = $o->load('example');
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mackanfkp/masher-template-engine/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
