@@ -95,12 +95,13 @@ class Masher_Template_Engine {
 		if (! ($file = $this->loadTemplateFile($file))) {
 			$retval = '<!-- Template does not exist -->';
 		} else {
-			if ($this->data) {
-				extract($this->data);
-			}
 			ob_start();
 
-			include $file;
+			//include $file;
+
+			if (false === eval('?>'. file_get_contents($file))) {
+				trigger_error("Parse error in template '$file'");
+			}
 
 			$retval = ob_get_clean();
 		}
